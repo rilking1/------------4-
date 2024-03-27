@@ -24,6 +24,14 @@ document.addEventListener('mousemove', function (event) {
 
 document.addEventListener('keyup', function (event) {
     if (event.key === 'e') {
+        const activeSlice = document.querySelector('.slice:hover');
+        if (activeSlice) {
+            const page = activeSlice.getAttribute('data-page');
+            if (page) {
+                // Редірект на відповідну сторінку згідно зі значенням data-page
+                window.location.href = page + '.html'; // Змініть .html на розширення вашої сторінки
+            }
+        }
         contextMenu.style.display = 'none';
         fixedPositionSet = false;
     }

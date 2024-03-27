@@ -84,21 +84,25 @@ body{
 .segment:nth-child(2) {
     transform: translateX(-50%) rotate(90deg);
 }
-.material-symbols-outlined{
+.material-symbols-outlined.quick{
     position: absolute;
     right: 40px;
     bottom: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-.material-symbols-outlined.logout{
+.material-symbols-outlined.quick.logout{
     transform: rotate(-90deg);
 }
-.material-symbols-outlined.account_circle{
+.material-symbols-outlined.quick.account_circle{
     transform: rotate(180deg);
 }
 .material-symbols-outlined.notifications{
     transform: rotate(90deg);
 }
-.slice:hover > .material-symbols-outlined{
+.slice:hover > .material-symbols-outlined.quick{
     color:#e48f13;;
     cursor: default;
 }
