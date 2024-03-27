@@ -1,0 +1,86 @@
+body{
+    height: 100px;
+}
+.context-menu {
+    position: fixed;
+    display: none;
+    z-index: 10000;
+}
+.circle {
+    width: 500px;
+    height: 500px;
+    background-color: inherit;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.CenterCircle {
+    width: 50px;
+    height: 50px;
+    background-color: inherit;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; /* Розміщення круга по вертикалі в центрі */
+    left: 50%; /* Розміщення круга по горизонталі в центрі */
+    transform: translate(-50%, -50%); /* Зсув вліво на половину ширини та вверх на половину висоти */
+    z-index: 200; /* Це потрібно, щоб гарантувати, що внутрішній круг перекриватиме зовнішній */
+    border: 5px solid black;
+}
+.MiniCenterCircle{
+    width: 10px;
+    height: 10px;
+    background-color: darkcyan;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; /* Розміщення круга по вертикалі в центрі */
+    left: 50%; /* Розміщення круга по горизонталі в центрі */
+    transform: translate(-50%, -50%); /* Зсув вліво на половину ширини та вверх на половину висоти */
+    z-index: 200; /* Це потрібно, щоб гарантувати, що внутрішній круг перекриватиме зовнішній */
+    border: 5px solid black;
+}
+
+.slice {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transform-origin: 100% 100%;
+}
+
+.slice.slice1 { background-color: #FF5733; transform: rotate(0deg); }
+.slice.slice1:hover{
+    background-color: #FFF;
+}
+
+.slice.slice2 { background-color: #33FF57; transform: rotate(90deg); }
+.slice.slice2:hover{
+    background-color: #FFF;
+}
+
+.slice.slice3 { background-color: #5733FF; transform: rotate(180deg); }
+.slice.slice3:hover{
+    background-color: #FFF;
+}
+
+.slice.slice4 { background-color: #FF33BD; transform: rotate(270deg); }
+.slice.slice4:hover{
+    background-color: #FFF;
+}
+
+.segment {
+    position: absolute;
+    width: 2px; /* Ширина риски */
+    height: 100%; /* Висота риски */
+    background-color: black; /* Колір риски */
+    left: 50%; /* Переміщення на відстань по X від центру */
+    transform-origin: 0 50%; /* Забезпечує, що риски обертаються навколо правого краю */
+    z-index: 100;
+}
+
+.segment:nth-child(1) {
+    transform: translateX(-50%) rotate(0deg); /* Зміщення кожного сегмента на 360/кількість_розділів градусів */
+}
+
+
+.segment:nth-child(2) {
+    transform: translateX(-50%) rotate(90deg);
+}
