@@ -17,8 +17,8 @@ document.addEventListener('mousemove', function (event) {
     if (!fixedPositionSet) {
         const mouseX = event.clientX;
         const mouseY = event.clientY;
-        contextMenu.style.left = mouseX - 250 + 'px';
-        contextMenu.style.top = mouseY - 250 + 'px';
+        contextMenu.style.left = mouseX - 500 + 'px';
+        contextMenu.style.top = mouseY - 500 + 'px';
     }
 });
 
@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     circle.addEventListener('mousemove', function(e) {
         var circleRect = circle.getBoundingClientRect();
-        var circleCenterX = circleRect.width / 2; // координата X центру .circle
-        var circleCenterY = circleRect.height / 2; // координата Y центру .circle
+        var circleCenterX = circleRect.width / 2;
+        var circleCenterY = circleRect.height / 2;
 
         var mouseX = e.clientX - circleRect.left;
         var mouseY = e.clientY - circleRect.top;
